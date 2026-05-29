@@ -9,6 +9,11 @@
 ## 📄 Parte 10 — Archivos de Licencia y Documentación
 
 
+
+<img width="881" height="1017" alt="image" src="https://github.com/user-attachments/assets/0cae697c-19e3-4ddb-8824-1eec39e826b1" />
+
+
+
 ---
 ### 1. LICENSE (Licencia MIT - Recomendada para proyectos open source)
 
