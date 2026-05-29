@@ -266,6 +266,626 @@ Licencia: MIT
 - ✅ Código de conducta para contribuciones
 - ✅ Créditos en todos los archivos
 
-¿Te parece bien esta estructura de licencia? ¿Quieres que ajustemos algo o agreguemos más archivos de configuración?
+ estructura de licencia
+ 
+ archivos de configuración
 
-Cuando estés listo, continuamos con los siguientes módulos del sistema. 😊
+ módulos del sistema. 😊
+
+
+
+-----
+
+
+_____
+
+2026 - abril - mayo  update repositorio no publico
+
+
+
+# 🏪 TIENDAS 3E PORTAL
+
+Sistema modular de Punto de Venta (POS), inventario, auditoría y administración desarrollado con HTML, CSS, JavaScript y Supabase.
+
+---
+
+
+
+# tiendas3e -- Tabla inventario para control de caducidades
+
+
+
+---
+
+
+<!---Ya quedó 🔥 ----->
+
+####  README, estructurado y mucho más profesional para el portal TIENDAS 3E:
+
+
+* arquitectura
+* módulos
+* CRUD
+* Supabase
+* auth
+* inventario
+* caducidades
+* deploy
+* estructura de carpetas
+* roles
+* seguridad
+* roadmap
+* SQL
+* Vercel
+* flujo del sistema
+
+**README de proyecto serio/portafolio técnico.**
+
+
+
+----
+
+
+# 📌 Descripción General
+
+TIENDAS 3E PORTAL es un sistema administrativo orientado a:
+
+* Punto de venta (POS)
+* Gestión de inventario
+* Control de caducidades
+* Auditoría
+* Gestión de usuarios
+* Reportes
+* Administración modular
+
+El proyecto fue construido como una arquitectura híbrida:
+
+* Frontend modular en JavaScript
+* Persistencia local mediante JSON y LocalStorage
+* Migración progresiva hacia backend real con Supabase
+* Sistema de autenticación escalable
+
+ 
+<h3><a href="https://tiendas3e-portal.vercel.app/index.html" >PORTAL principal website </a></h3>
+  <a href="https://tiendas3e-portal.vercel.app/index.html">
+<img width="854px" height="900px" alt="image" 
+  src="https://github.com/user-attachments/assets/34a0cdc1-27d7-4605-84b9-1a9966bed061" href="https://tiendas3e-portal.vercel.app/index.html" />
+  </a>
+
+
+---
+
+# 🚀 Características Principales
+
+## 🛒 Punto de Venta (POS)
+
+* Venta rápida de productos
+* Cálculo automático de totales
+* Cobro en efectivo y tarjeta
+* Tickets
+* Búsqueda rápida de productos
+* Integración futura con código de barras
+* Sistema modular
+
+---
+
+## 📦 Administración e Inventario
+
+CRUD completo:
+
+genui{"math_block_widget_always_prefetch_v2":{"content":"CRUD = \{Create,\ Read,\ Update,\ Delete\}"}}
+
+Funciones:
+
+* Crear productos
+* Editar inventario
+* Actualizar stock
+* Modificar precios
+* Eliminar productos
+* Control de categorías
+* Gestión de cantidades
+* Control de stock bajo
+* Inventario teórico vs físico
+
+---
+
+## ⏰ Sistema de Caducidades
+
+Sistema inteligente para:
+
+* Detectar productos próximos a vencer
+* Marcar productos caducados
+* Calcular vida útil automáticamente
+* Gestionar fechas de fabricación
+* Colorear estados visualmente
+
+Estados:
+
+* OK
+* Por vencer
+* Caducado
+* Sin fecha
+
+---
+
+## 🔍 Auditoría
+
+Módulo orientado a:
+
+* Revisar movimientos
+* Ver historial
+* Auditoría de acciones
+* Seguimiento de operaciones
+* Control administrativo
+
+---
+
+## 📊 Reportes y Analytics
+
+* Reportes de ventas
+* Reportes financieros
+* Métricas rápidas
+* Inventario total
+* Productos críticos
+* Estadísticas generales
+
+---
+
+## 👥 Gestión de Personal
+
+Roles planeados:
+
+| Rol       | Acceso               |
+| --------- | -------------------- |
+| Empleado  | POS y lectura        |
+| Encargado | CRUD parcial         |
+| Gerente   | Acceso completo      |
+| Auditor   | Reportes y auditoría |
+
+---
+
+# 🧠 Arquitectura del Proyecto
+
+## Arquitectura híbrida
+
+El sistema fue diseñado para funcionar inicialmente con:
+
+* JSON
+* LocalStorage
+* Frontend puro
+
+Y posteriormente migrar hacia:
+
+* Supabase Auth
+* Base de datos PostgreSQL
+* Row Level Security (RLS)
+* Roles reales
+* Backend escalable
+
+---
+
+# ⚙️ Tecnologías Utilizadas
+
+## Frontend
+
+* HTML5
+* CSS3
+* SCSS
+* JavaScript ES6+
+
+* 
+
+
+<img width="1168" height="546" alt="image" src="https://github.com/user-attachments/assets/9d20914c-0fed-4f19-9bba-1fdbf030a49c" />
+
+---
+
+## Backend / Datos
+
+* Supabase
+* PostgreSQL
+* JSON
+* LocalStorage
+
+
+  <img width="1255" height="511" alt="image" src="https://github.com/user-attachments/assets/10df79ba-8647-41fd-9746-3690813cbd07" />
+
+
+---
+
+## Hosting y Deploy
+
+* GitHub
+* Vercel
+
+---
+
+# 📁 Estructura del Proyecto
+
+```txt
+/sistem-shop/
+├── index.html
+├── index_pos.html
+├── admin.html
+├── auditor.html
+├── reports.html
+├── personal.html
+├── login.html
+├── config.html
+├── profile.html
+├── debug.html
+├── test.html
+├── test-simple.html
+│
+├── /caducidades/
+│   ├── index.html
+│   ├── app.js
+│   ├── script.js
+│   ├── style.scss
+│   ├── inventario.json
+│   └── inventario_caducidades.json
+│
+├── /js/
+│   ├── auth.js
+│   ├── accounting.js
+│   ├── app_admin.js
+│   ├── storage-utils.js
+│   ├── pos.js
+│   ├── inventory.js
+│   └── supabaseClient.js
+│
+├── /data/
+│   └── inventario.json
+│
+├── styles_system.css
+├── README.md
+├── LICENSE.md
+└── db.md
+```
+
+---
+
+# 🔐 Sistema de Autenticación
+
+## Etapa inicial
+
+El sistema originalmente trabajaba con:
+
+* LocalStorage
+* Usuarios simulados
+* Roles en frontend
+
+Ejemplo:
+
+```js
+const user = {
+  username: 'admin',
+  role: 'admin'
+}
+```
+
+---
+
+## Migración a Supabase Auth
+
+Actualmente el proyecto está migrando hacia autenticación real usando Supabase.
+
+Ejemplo:
+
+```js
+const { error } = await supabase.auth.signInWithPassword({
+  email,
+  password
+})
+```
+
+---
+
+# 🔑 Variables de Entorno
+
+## Variables públicas permitidas
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+```
+
+---
+
+## Variables privadas (NO subir)
+
+```env
+SERVICE_ROLE_KEY=
+JWT_SECRET=
+POSTGRES_PASSWORD=
+```
+
+---
+
+# 🛡️ Seguridad
+
+## Estado actual
+
+El sistema actualmente es un MVP funcional.
+
+Se utilizan:
+
+* Roles visuales
+* Restricción por frontend
+* Auth híbrido
+* Validaciones JavaScript
+
+---
+
+## Próximas mejoras
+
+* Row Level Security (RLS)
+* Policies SQL
+* Roles reales
+* Middleware
+* Backend seguro
+* Validaciones servidor
+
+---
+
+# 📦 Inventario y Productos
+
+Modelo aproximado:
+
+```sql
+CREATE TABLE productos (
+  id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+  codigo_barras TEXT UNIQUE,
+  nombre TEXT NOT NULL,
+  cantidad INTEGER DEFAULT 0,
+  precio NUMERIC(10,2),
+  fecha_caducidad DATE,
+  creado_en TIMESTAMP DEFAULT NOW()
+);
+```
+
+---
+
+# 📈 Flujo General del Sistema
+
+```txt
+Login
+↓
+Portal Principal
+↓
+POS / Inventario / Auditoría
+↓
+CRUD
+↓
+Persistencia JSON o Supabase
+```
+
+---
+
+# 🧩 Módulos Principales
+
+## index.html
+
+Portal principal del sistema.
+
+Funciones:
+
+* Navegación principal
+* Estadísticas rápidas
+* Acceso modular
+* Dashboard visual
+
+---
+
+## admin.html
+
+Panel administrativo.
+
+Funciones:
+
+* CRUD
+* Inventario
+* Edición de productos
+* Gestión de stock
+* Ajustes
+
+---
+
+## index_pos.html
+
+Punto de venta.
+
+Funciones:
+
+* Cobro
+* Tickets
+* Búsqueda rápida
+* Ventas
+* Carrito
+
+---
+
+## auditor.html
+
+Funciones:
+
+* Logs
+* Reportes
+* Auditoría
+* Historial
+
+---
+
+## reports.html
+
+Funciones:
+
+* Analytics
+* Métricas
+* Reportes financieros
+* Estadísticas
+
+---
+
+## login.html
+
+Sistema de autenticación.
+
+Funciones:
+
+* Login
+* Roles
+* Sesiones
+* Validación
+
+---
+
+# 🧠 Filosofía del Proyecto
+
+El objetivo principal del proyecto es:
+
+* Aprender arquitectura real
+* Separar frontend y backend
+* Entender autenticación
+* Construir sistemas escalables
+* Crear una base administrativa reutilizable
+
+---
+
+# 🛠️ Instalación
+
+## Clonar repositorio
+
+```bash
+git clone https://github.com/usuario/repositorio.git
+```
+
+---
+
+## Entrar al proyecto
+
+```bash
+cd tiendas3e-portal
+```
+
+---
+
+## Abrir con Live Server
+
+Recomendado:
+
+* VSCode
+* Live Server Extension
+
+---
+
+# ☁️ Deploy
+
+## Vercel
+
+1. Conectar repositorio GitHub
+2. Configurar variables de entorno
+3. Deploy automático
+
+---
+
+# 📌 Estado del Proyecto
+
+## Actualmente implementado
+
+✅ Dashboard
+
+✅ POS
+
+✅ CRUD básico
+
+✅ Inventario
+
+✅ Caducidades
+
+✅ Reportes básicos
+
+✅ Roles visuales
+
+✅ Persistencia JSON
+
+✅ Migración a Supabase
+
+---
+
+## En desarrollo
+
+🚧 RLS
+
+🚧 Auth real completo
+
+🚧 Código de barras
+
+🚧 Auditoría avanzada
+
+🚧 Multiusuario real
+
+🚧 Exportación Excel
+
+🚧 API modular
+
+---
+
+# 🧪 Objetivos Técnicos
+
+Este proyecto sirve como práctica de:
+
+* Arquitectura frontend
+* Gestión modular
+* Sistemas POS
+* CRUDs reales
+* SQL
+* PostgreSQL
+* Supabase
+* Deploy
+* Roles y permisos
+* Diseño de sistemas administrativos
+
+---
+
+# 📄 Licencia
+
+Proyecto educativo y experimental.
+
+---
+
+
+```
+# ✨ Autor
+
+Desarrollado por:
+
+[OzClef](https://github.com/ozclef)
+
+Proyecto orientado al aprendizaje práctico de sistemas administrativos, inventarios, backend híbrido y autenticación moderna.
+
+
+```
+
+
+---
+
+# 🔥 Notas Finales
+
+Este proyecto representa una transición entre:
+
+* aplicaciones frontend simples
+* y arquitectura real cliente-servidor.
+
+Incluye:
+
+* autenticación
+* inventarios
+* persistencia
+* dashboards
+* control de roles
+* CRUDs
+* auditoría
+* analytics
+
+El objetivo final es evolucionar hacia una plataforma completamente modular y escalable basada en Supabase y PostgreSQL.
